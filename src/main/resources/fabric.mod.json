@@ -1,0 +1,16 @@
+{
+  "id": "smokeextender",
+  "name": "Smoke Extender",
+  "description": "Extends the age of the campfire smoke, so it gains new heights!",
+  "version": "1.0.0",
+  "side": "client",
+  "initializers": [
+    "net.smokeextender.SmokeExtender"
+  ],
+  "requires": {
+
+  },
+  "mixins": {
+    "client": "smokeextender.client.json"
+  }
+}

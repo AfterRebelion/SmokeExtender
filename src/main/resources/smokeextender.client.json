@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "net.smokeextender.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "SmokeExtenderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
