@@ -1,4 +1,4 @@
-package net.smokeextender.mixin;
+package net.afterrebelion.smokeextender.mixin;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

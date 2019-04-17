@@ -1,4 +1,4 @@
-package net.smokeextender;
+package net.afterrebelion.smokeextender;
 
 import net.fabricmc.api.ClientModInitializer;
 
