@@ -14,7 +14,7 @@
   },
 
   "license": "MIT",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/smokeextender/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -24,12 +24,5 @@
   },
   "mixins": [
     "smokeextender.mixins.json"
-  ],
-
-  "requires": {
-    "fabricloader": ">=0.4.0"
-  },
-  "suggests": {
-    "flamingo": "*"
-  }
+  ]
 }
