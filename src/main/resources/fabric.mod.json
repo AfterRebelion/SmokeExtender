@@ -10,13 +10,17 @@
   ],
   "contact": {
     "homepage": "https://github.com/AfterRebelion/SmokeExtender",
-    "sources": "https://github.com/AfterRebelion/SmokeExtender"
+    "sources": "https://github.com/AfterRebelion/SmokeExtender",
+    "issues": "https://github.com/AfterRebelion/SmokeExtender/issues"
+  },
+  "custom": {
+    "modmenu:clientsideOnly": true
   },
 
   "license": "MIT",
   "icon": "assets/smokeextender/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
     "client": [
       "net.afterrebelion.smokeextender.SmokeExtender"

@@ -25,8 +25,8 @@ public abstract class SmokeExtenderMixin extends SpriteBillboardParticle {
 		}
 	}
 
-	@Inject(at = @At("RETURN"), method = "update()V")
-	public void update(CallbackInfo info) {
+	@Inject(at = @At("RETURN"), method = "tick()V")
+	public void tick(CallbackInfo info) {
 		// System.out.println( "Before: " + this.velocityX);
 		this.velocityX -= this.velocityX / 170.0D;
 		// System.out.println( "After:  " + this.velocityX);
