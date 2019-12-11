@@ -18,8 +18,8 @@ public abstract class SmokeExtenderMixin extends SpriteBillboardParticle {
 	}
 
 	@Inject(at = @At("RETURN"), method = "<init>(Lnet/minecraft/world/World;DDDDDDZ)V")
-	private void CampfireSmokeParticle (World world_1, double double_1, double double_2, double double_3, double double_4, double double_5, double double_6, boolean boolean_1, CallbackInfo info) {
-		if (boolean_1) {
+	private void CampfireSmokeParticle (World world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, boolean bl, CallbackInfo info) {
+		if (bl) {
 			// System.out.println("Injecting on the smoke constructor!");
 			this.maxAge += 560;
 		}
