@@ -4,7 +4,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
 import net.minecraft.client.particle.SpriteBillboardParticle;
-import net.minecraft.world.World;
+import net.minecraft.client.world.ClientWorld;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -13,13 +13,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Environment(EnvType.CLIENT)
 @Mixin(net.minecraft.client.particle.CampfireSmokeParticle.class)
 public abstract class SmokeExtenderMixin extends SpriteBillboardParticle {
-	public SmokeExtenderMixin(World world_1, double double_1, double double_2, double double_3, double double_4, double double_5, double double_6) {
-		super(world_1, double_1, double_2, double_3, double_4, double_5, double_6);
+	public SmokeExtenderMixin(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
+		super(world, x, y, z, velocityX, velocityY, velocityZ);
 	}
 
-	@Inject(at = @At("RETURN"), method = "<init>(Lnet/minecraft/world/World;DDDDDDZ)V")
-	private void CampfireSmokeParticle (World world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, boolean bl, CallbackInfo info) {
-		if (bl) {
+	@Inject(at = @At("RETURN"), method = "<init>(Lnet/minecraft/client/world/ClientWorld;DDDDDDZ)V")
+	private void CampfireSmokeParticle (ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, boolean signalFire, CallbackInfo info) {
+		if (signalFire) {
 			// System.out.println("Injecting on the smoke constructor!");
 			this.maxAge += 560;
 		}
