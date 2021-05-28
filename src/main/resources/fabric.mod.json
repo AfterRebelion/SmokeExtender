@@ -1,37 +1,34 @@
 {
-  "schemaVersion": 1,
-  "id": "smokeextender",
-  "version": "${version}",
+	"schemaVersion": 1,
+	"id": "smokeextender",
+	"version": "${version}",
 
-  "name": "Smoke Extender",
-  "description": "Extends the age of the campfire smoke, so it gains new heights!",
-  "authors": [
-    "AfterRebelion"
-  ],
-  "contact": {
-    "homepage": "https://github.com/AfterRebelion/SmokeExtender",
-    "sources": "https://github.com/AfterRebelion/SmokeExtender",
-    "issues": "https://github.com/AfterRebelion/SmokeExtender/issues"
-  },
-  "custom": {
-    "modmenu:clientsideOnly": true
-  },
+	"name": "Smoke Extender",
+	"description": "Extends the age of the campfire smoke, so it gains new heights!",
+	"authors": [
+		"AfterRebelion"
+	],
+	"contact": {
+		"homepage": "https://github.com/AfterRebelion/SmokeExtender",
+		"sources": "https://github.com/AfterRebelion/SmokeExtender",
+		"issues": "https://github.com/AfterRebelion/SmokeExtender/issues"
+	},
 
-  "license": "MIT",
-  "icon": "assets/smokeextender/icon.png",
+	"license": "MIT",
+	"icon": "assets/smokeextender/icon.png",
 
-  "environment": "client",
-  "entrypoints": {
-    "client": [
-      "net.afterrebelion.smokeextender.SmokeExtender"
-    ]
-  },
-  "mixins": [
-    "smokeextender.mixins.json"
-  ],
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"net.afterrebelion.smokeextender.SmokeExtender"
+		]
+	},
+	"mixins": [
+		"smokeextender.mixins.json"
+	],
 
-  "depends": {
-    "fabricloader": ">=0.8.8",
-    "minecraft": "1.16.x"
-  }
+	"depends": {
+		"fabricloader": ">=0.11.0",
+		"minecraft": "1.16.x"
+	}
 }
