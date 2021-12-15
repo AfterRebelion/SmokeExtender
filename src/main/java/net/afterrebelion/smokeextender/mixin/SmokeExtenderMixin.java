@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Environment(EnvType.CLIENT)
 @Mixin(net.minecraft.client.particle.CampfireSmokeParticle.class)
 public abstract class SmokeExtenderMixin extends SpriteBillboardParticle {
-	public SmokeExtenderMixin(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
+	SmokeExtenderMixin(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
 		super(world, x, y, z, velocityX, velocityY, velocityZ);
 	}
 
@@ -26,7 +26,7 @@ public abstract class SmokeExtenderMixin extends SpriteBillboardParticle {
 	}
 
 	@Inject(at = @At("RETURN"), method = "tick()V")
-	public void tick(CallbackInfo info) {
+	private void tick(CallbackInfo info) {
 		// System.out.println( "Before: " + this.velocityX);
 		this.velocityX -= this.velocityX / 170.0D;
 		// System.out.println( "After:  " + this.velocityX);
