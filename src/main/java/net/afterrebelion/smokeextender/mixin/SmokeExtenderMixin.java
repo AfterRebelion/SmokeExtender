@@ -27,9 +27,14 @@ public abstract class SmokeExtenderMixin extends SpriteBillboardParticle {
 
 	@Inject(at = @At("RETURN"), method = "tick()V")
 	private void tick(CallbackInfo info) {
-		// System.out.println( "Before: " + this.velocityX);
-		this.velocityX -= this.velocityX / 170.0D;
-		// System.out.println( "After:  " + this.velocityX);
-		this.velocityZ -= this.velocityZ / 170.0D;
+		if (this.age >= 180) {
+			// System.out.println( "Before: " + this.velocityX);
+			this.velocityX /= 25.0D;
+			// System.out.println( "After:  " + this.velocityX);
+			this.velocityZ /= 25.0D;
+			if (this.age >= this.maxAge - 600 && this.age < this.maxAge - 60 && this.alpha > 0.05F) {
+				this.alpha -= 0.002F;
+			}
+		}
 	}
 }
